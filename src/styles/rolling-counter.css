@@ -429,3 +429,327 @@ body:has(.rc-page) .shell__panel { width:100%!important; max-width:none!importan
     text-align: center;
   }
 }
+
+/* Contact page */
+.rc-inner .cgrid {
+  display: block;
+  width: 100%;
+  max-width: 1180px;
+  height: auto;
+  min-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--rc-ink);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rc-inner .cgrid .pgrid__head {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rc-ink);
+}
+
+.rc-inner .cgrid .pgrid__eyebrow,
+.rc-inner .cgrid__eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--rc-red);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.rc-inner .cgrid .pgrid__title {
+  margin: 12px 0 22px;
+  color: var(--rc-ink);
+  font: clamp(42px, 6vw, 80px)/1.05 'Instrument Serif', Georgia, serif;
+  letter-spacing: -1px;
+}
+
+.rc-inner .cgrid .pgrid__lede {
+  max-width: 680px;
+  color: var(--rc-ink);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.rc-inner .cgrid__glass {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  height: auto;
+  min-height: 0;
+  overflow: visible;
+  padding: 0;
+  background: var(--rc-cream);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--rc-ink);
+  backdrop-filter: none;
+}
+
+.rc-inner .cgrid__aside,
+.rc-inner .cgrid__panel {
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  padding: 32px;
+  overflow: visible;
+  background: transparent;
+  color: var(--rc-ink);
+  border-radius: 0;
+}
+
+.rc-inner .cgrid__aside {
+  border-right: 1px solid var(--rc-ink);
+}
+
+.rc-inner .cgrid__aside-title,
+.rc-inner .cgrid__done-title {
+  color: var(--rc-ink);
+  font: 34px/1.15 'Instrument Serif', Georgia, serif;
+  letter-spacing: 0;
+}
+
+.rc-inner .cgrid__aside-title > span {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--rc-ink);
+  font: 11px/1.8 'JetBrains Mono', monospace;
+}
+
+.rc-inner .cgrid__faqs {
+  max-height: none;
+  overflow: visible;
+  margin: 28px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rc-inner .cgrid__faq {
+  border-bottom: 1px solid #0d0d0d30;
+}
+
+.rc-inner .cgrid__faq-q {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 18px 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  text-align: left;
+  color: var(--rc-ink);
+  font-size: 12px;
+}
+
+.rc-inner .cgrid__step-index {
+  color: var(--rc-red);
+}
+
+.rc-inner .cgrid__faq-text {
+  flex: 1;
+}
+
+.rc-inner .cgrid__faq-a p,
+.rc-inner .cgrid__done-body {
+  color: var(--rc-ink);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.rc-inner .cgrid__faq-a[hidden] {
+  display: none;
+}
+
+.rc-inner .cgrid__direct {
+  margin-top: 30px;
+}
+
+.rc-inner .cgrid__mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--rc-red);
+  font-size: 12px;
+}
+
+.rc-inner .cgrid__mail span {
+  overflow-wrap: anywhere;
+}
+
+.rc-inner .cgrid__socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 0;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.rc-inner .cgrid__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--rc-paper);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+}
+
+.rc-inner .cgrid__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  height: auto;
+}
+
+.rc-inner .cgrid__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.rc-inner .cgrid__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.rc-inner .cgrid__label {
+  color: var(--rc-ink);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.rc-inner .cgrid__field input,
+.rc-inner .cgrid__field textarea {
+  width: 100%;
+  padding: 14px;
+  background: var(--rc-paper);
+  color: var(--rc-ink);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: none;
+  font: 16px/1.6 'JetBrains Mono', monospace;
+}
+
+.rc-inner .cgrid__field input::placeholder,
+.rc-inner .cgrid__field textarea::placeholder {
+  color: #595959;
+  opacity: 1;
+}
+
+.rc-inner .cgrid__field textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+.rc-inner .cgrid__trap {
+  display: none;
+}
+
+.rc-inner .cgrid__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+.rc-inner .cgrid__submit,
+.rc-inner .cgrid__again {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 14px 20px;
+  background: var(--rc-ink);
+  color: var(--rc-cream);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 11px;
+}
+
+.rc-inner .cgrid__submit:hover,
+.rc-inner .cgrid__again:hover {
+  background: var(--rc-red);
+}
+
+.rc-inner .cgrid__submit:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.rc-inner .cgrid__hint,
+.rc-inner .cgrid__status {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--rc-ink);
+}
+
+.rc-inner .cgrid__status {
+  color: #a51208;
+}
+
+.rc-inner .cgrid__done {
+  padding: 24px 0;
+}
+
+.rc-inner .cgrid__done-mark {
+  color: var(--rc-red);
+  background: transparent;
+}
+
+@media (max-width: 760px) {
+  .rc-inner .cgrid__glass {
+    grid-template-columns: 1fr;
+  }
+
+  .rc-inner .cgrid__aside {
+    border-right: 0;
+    border-bottom: 1px solid var(--rc-ink);
+  }
+
+  .rc-inner .cgrid__aside,
+  .rc-inner .cgrid__panel {
+    padding: 24px;
+  }
+
+  .rc-inner .cgrid__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Keep FAQ questions readable in every state */
+.rc-inner .cgrid__faq-q,
+.rc-inner .cgrid__faq-q .cgrid__faq-text,
+.rc-inner .cgrid__faq-q .cgrid__faq-caret {
+  color: var(--rc-ink);
+  opacity: 1;
+  visibility: visible;
+  text-shadow: none;
+}
+
+.rc-inner .cgrid__faq-q:hover,
+.rc-inner .cgrid__faq-q:focus-visible {
+  background: var(--rc-paper);
+  box-shadow: none;
+  filter: none;
+}
+
+.rc-inner .cgrid__faq-q:hover .cgrid__faq-text,
+.rc-inner .cgrid__faq-q:focus-visible .cgrid__faq-text,
+.rc-inner .cgrid__faq.is-open .cgrid__faq-text {
+  color: var(--rc-red);
+}
+
+.rc-inner .cgrid__faq-q::before,
+.rc-inner .cgrid__faq-q::after {
+  display: none;
+}
