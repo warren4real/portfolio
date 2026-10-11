@@ -68,3 +68,364 @@ body:has(.rc-page) .shell__panel { width:100%!important; max-width:none!importan
 .rc-counter {
   align-self: center;
 }
+/* Shared layout for portfolio pages */
+.rc-inner {
+  background: var(--rc-paper);
+}
+
+.rc-inner-nav {
+  background: var(--rc-red);
+  border-bottom: 1px solid var(--rc-ink);
+  flex-wrap: wrap;
+}
+
+.rc-inner-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+}
+
+.rc-inner-links a {
+  padding: 8px 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.rc-inner-links a:hover,
+.rc-inner-links a.active {
+  border-bottom-color: var(--rc-ink);
+}
+
+.rc-inner-content {
+  min-height: calc(100svh - 190px);
+  padding: 64px 5vw 80px;
+}
+
+.rc-inner-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 24px 5vw;
+  border-top: 1px solid var(--rc-ink);
+  font-size: 10px;
+}
+
+.rc-inner-footer a:hover {
+  text-decoration: underline;
+}
+
+.rc-inner :focus-visible {
+  outline: 3px solid var(--rc-ink);
+  outline-offset: 4px;
+}
+
+.rc-inner-skip {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 12px;
+  background: var(--rc-paper);
+  transform: translateY(-200%);
+}
+
+.rc-inner-skip:focus {
+  transform: translateY(0);
+}
+
+.rc-loading {
+  padding: 24px;
+  font-size: 12px;
+}
+
+/* Content pages */
+.rc-inner .wm-page {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0;
+  color: var(--rc-ink);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.rc-inner .wm-page > header {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--rc-ink);
+}
+
+.rc-inner .wm-eyebrow {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--rc-red);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.rc-inner .wm-page h1 {
+  max-width: 900px;
+  margin: 12px 0 22px;
+  font: clamp(42px, 6vw, 80px)/1.05 'Instrument Serif', Georgia, serif;
+  letter-spacing: -1px;
+  color: var(--rc-ink);
+}
+
+.rc-inner .wm-page h2 {
+  margin: 0 0 18px;
+  font: clamp(25px, 3vw, 36px)/1.15 'Instrument Serif', Georgia, serif;
+  letter-spacing: 0;
+  color: var(--rc-ink);
+}
+
+.rc-inner .wm-page h3 {
+  margin: 0 0 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.rc-inner .wm-page p,
+.rc-inner .wm-page li {
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--rc-ink);
+}
+
+.rc-inner .wm-page > header > p {
+  max-width: 680px;
+}
+
+.rc-inner .wm-page ul {
+  padding-left: 20px;
+}
+
+.rc-inner .wm-page li + li {
+  margin-top: 10px;
+}
+
+.rc-inner .wm-meta {
+  opacity: .65;
+}
+
+.rc-inner .wm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.rc-inner .wm-card {
+  min-width: 0;
+  padding: 30px;
+  background: var(--rc-cream);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: 5px 5px 0 var(--rc-ink);
+  backdrop-filter: none;
+}
+
+.rc-inner .wm-full {
+  grid-column: 1 / -1;
+}
+
+.rc-inner .wm-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 22px 0;
+}
+
+.rc-inner .wm-tags span {
+  padding: 7px 10px;
+  border: 1px solid #0d0d0d40;
+  border-radius: 0;
+  background: transparent;
+  color: var(--rc-ink);
+  font-size: 10px;
+}
+
+.rc-inner .wm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 13px 20px;
+  background: var(--rc-ink);
+  color: var(--rc-cream);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  font-size: 11px;
+  box-shadow: none;
+}
+
+.rc-inner .wm-button:hover {
+  background: var(--rc-red);
+  color: var(--rc-cream);
+}
+
+.rc-inner .wm-text-link {
+  display: inline-block;
+  color: var(--rc-red);
+  font-size: 11px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.rc-inner .wm-showcase-link {
+  margin-bottom: 24px;
+}
+
+.rc-inner .wm-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.rc-inner .wm-strip p {
+  margin-bottom: 0;
+}
+
+/* Work: project selector and details */
+.rc-inner .wm-project-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, .8fr) minmax(0, 1.5fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.rc-inner .wm-project-list {
+  display: grid;
+  gap: 12px;
+}
+
+.rc-inner .wm-project-list button {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 100%;
+  padding: 22px;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.rc-inner .wm-project-list button:hover {
+  background: var(--rc-cream);
+}
+
+.rc-inner .wm-project-list button[aria-pressed='true'] {
+  background: var(--rc-red);
+  color: var(--rc-cream);
+  box-shadow: 4px 4px 0 var(--rc-ink);
+}
+
+.rc-inner .wm-project-list button > span {
+  font-size: 11px;
+}
+
+.rc-inner .wm-project-list strong {
+  display: block;
+  font-size: 14px;
+  color: inherit;
+}
+
+.rc-inner .wm-project-list small {
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+  line-height: 1.7;
+  color: inherit;
+}
+
+.rc-inner .wm-project-detail {
+  position: static;
+}
+
+/* Experience */
+.rc-inner .wm-timeline {
+  display: grid;
+  gap: 28px;
+}
+
+/* Showcase: preserve the existing carousel */
+.rc-inner .wm-showcase {
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.rc-inner .wm-slide {
+  background: var(--rc-cream);
+  color: var(--rc-ink);
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  box-shadow: 6px 6px 0 var(--rc-ink);
+  backdrop-filter: none;
+}
+
+.rc-inner .wm-slide-number {
+  color: var(--rc-red);
+  font-family: Archivo, sans-serif;
+}
+
+.rc-inner .wm-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 30px;
+  color: var(--rc-ink);
+  font-size: 11px;
+}
+
+.rc-inner .wm-carousel-controls button {
+  min-height: 44px;
+  padding: 12px 18px;
+  border: 1px solid var(--rc-ink);
+  border-radius: 0;
+  background: var(--rc-ink);
+  color: var(--rc-cream);
+}
+
+.rc-inner .wm-carousel-controls button:hover {
+  background: var(--rc-red);
+}
+
+@media (max-width: 760px) {
+  .rc-inner-content {
+    padding: 40px 22px 60px;
+  }
+
+  .rc-inner-links {
+    order: 3;
+    width: 100%;
+    gap: 8px 18px;
+  }
+
+  .rc-inner .wm-grid,
+  .rc-inner .wm-project-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .rc-inner .wm-card {
+    padding: 24px;
+  }
+
+  .rc-inner .wm-page h1 {
+    font-size: clamp(40px, 9vw, 60px);
+  }
+
+  .rc-inner .wm-carousel-controls > span {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+}
