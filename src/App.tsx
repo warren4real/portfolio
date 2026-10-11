@@ -26,7 +26,7 @@ const HeroCanvas = lazy(() => import('@/components/HeroCanvasV2'))
  * must not scroll, which is what `data-fixed` switches off. Projects,
  * Testimonials, About and Contact are built to the same budget and join it.
  */
-export default function App() {
+function ExistingApp() {
   useLenis()
 
   const { pathname } = useLocation()
@@ -118,4 +118,10 @@ export default function App() {
       <AccessMenu />
     </>
   )
+}
+
+export default function App() {
+  const { pathname } = useLocation()
+  if (pathname === '/') return <main id={SCROLLER_ID} className="rc-root"><Suspense fallback={null}><Outlet /></Suspense></main>
+  return <ExistingApp />
 }
