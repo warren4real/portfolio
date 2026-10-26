@@ -5,13 +5,18 @@ import '@/styles/rolling-counter.css'
 
 const alphabet = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.:/+!?-&'
 const scenes = [
-  ['PORTFOLIO', 'Hi, I’m Warren.', 'I build with purpose.'],
-  ['FLUTTER', 'From an idea to an app.', 'Built for people.'],
-  ['WEB DEV', 'Interfaces with intention.', 'Code with purpose.'],
-  ['POWER BI', 'Turning data into insight.', 'Making it useful.'],
-  ['ARAH', 'Finding a way around campus.', 'One route at a time.'],
-  ['LET’S TALK'.replace('’', "'"), 'Ready for the next opportunity.', 'Let’s build something.'],
-].map(([word, caption, emphasis]) => ({ word: word.replace("'", ''), caption, emphasis }))
+  ['PORTFOLIO', 'Hi, I’m Warren.', 'An IT graduate who enjoys building things.'],
+  ['WEB DEV', 'Websites and web applications.', 'From interface to database.'],
+  ['ASP.NET', 'Business applications with ASP.NET Core.', 'Product management, search and reporting.'],
+  ['MOBILE', 'Mobile apps for everyday tasks.', 'Built with Flutter and SwiftUI.'],
+  ['AUTOMATE', 'Less repetitive work.', 'Connected requests and approvals.'],
+  ['POWER BI', 'Making sense of business data.', 'Through interactive dashboards.'],
+  ['LETS TALK', 'Have a role or project in mind?', 'I’d be happy to hear about it.'],
+].map(([word, caption, emphasis]) => ({
+  word,
+  caption,
+  emphasis,
+}))
 function centered(word: string) {
   return word.padStart(Math.floor((9 - word.length) / 2) + word.length).padEnd(9).slice(0, 9)
 }
