@@ -88,8 +88,8 @@ export default function Home() {
   return <div className="rc-page">
     <nav className="rc-nav" aria-label="Main navigation">
       <Link className="rc-logo" to="/">warren<span>®</span></Link>
-      <div className="rc-links"><Link to="/projects">Work ↗</Link><Link to="/about">About</Link><Link to="/services">Skills</Link><Link to="/showcase">Showcase</Link><Link to="/testimonials">Experience</Link></div>
-      <div className="rc-nav-right"><span className="rc-clock">PH {clock}</span><Link className="rc-contact" to="/contact">Let’s talk ↗</Link></div>
+      <div className="rc-links"><Link to="/projects">Work</Link><Link to="/about">About</Link><Link to="/services">Skills</Link><Link to="/showcase">Showcase</Link><Link to="/testimonials">Experience</Link></div>
+      <div className="rc-nav-right"><span className="rc-clock">PH {clock}</span><Link className="rc-contact" to="/contact">Let’s talk</Link></div>
     </nav>
     <section className="rc-hero" aria-labelledby="rc-title" onPointerMove={e => {
       if (e.pointerType !== 'mouse' || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -112,9 +112,9 @@ export default function Home() {
       </div>
       <p className="rc-caption" key={scene}>{current.caption}<br /><em>{current.emphasis}</em></p>
       <p className="rc-intro">{profile.hero.body}</p>
-      <div className="rc-controls"><span>CLICK THE COUNTER TO SPIN</span><button onClick={() => setPaused(p => !p)} aria-pressed={paused}>{paused ? 'Resume rotation' : 'Pause rotation'}</button><a href={`${import.meta.env.BASE_URL}Warren_Malawae_Resume.pdf`} download>Download résumé ↗</a></div>
+      <div className="rc-controls"><span>CLICK THE COUNTER TO SPIN</span><button onClick={() => setPaused(p => !p)} aria-pressed={paused}>{paused ? 'Resume rotation' : 'Pause rotation'}</button><a href={`${import.meta.env.BASE_URL}Warren_Malawae_Resume.pdf`} download>Download résumé</a></div>
       <footer className="rc-rail"><span>WEB · MOBILE · DATA · AUTOMATION</span><div className="rc-progress" aria-label="Choose a scene">{scenes.map((s, i) => <button key={s.word} aria-label={`Show ${s.word}`} aria-current={i === scene ? 'step' : undefined} onClick={() => { setScene(i); setSpin(n => n + 1) }} className={i === scene ? 'active' : ''} />)}</div><a href="#rc-explore">SCROLL TO EXPLORE ↓</a></footer>
     </section>
-    <section className="rc-explore" id="rc-explore"><span className="rc-kicker">Beyond the counter / Warren Malawae</span><h2>Built with <em>purpose.</em></h2><div className="rc-tiles">{[['/projects', '01', 'Selected work', 'Explore my projects and the problems behind them.'], ['/services', '02', 'Technical toolkit', 'The tools and skills I bring to development.'], ['/about', '03', 'A little about me', 'My background, learning, and approach.'], ['/testimonials', '04', 'Experience', 'My internship work and community involvement.'], ['/contact', '05', 'Start a conversation', 'Have an opportunity or an idea? Let’s talk.']].map(([href, number, title, body]) => <Link key={href} to={href}><span>{number} / EXPLORE ↗</span><h3>{title}</h3><p>{body}</p></Link>)}</div></section>
+    <section className="rc-explore" id="rc-explore"><span className="rc-kicker">Beyond the counter / Warren Malawae</span><h2>Built with <em>purpose.</em></h2><div className="rc-tiles">{[['/projects', '01', 'Selected work', 'Explore my projects and the problems behind them.'], ['/services', '02', 'Technical toolkit', 'The tools and skills I bring to development.'], ['/about', '03', 'A little about me', 'My background, learning, and approach.'], ['/testimonials', '04', 'Experience', 'My internship work and community involvement.'], ['/contact', '05', 'Start a conversation', 'Have an opportunity or an idea? Let’s talk.']].map(([href, number, title, body]) => <Link key={href} to={href}><span>{number} / EXPLORE</span><h3>{title}</h3><p>{body}</p></Link>)}</div></section>
   </div>
 }
