@@ -1305,3 +1305,5 @@ body:has(.rc-page) .shell__panel {
     grid-template-columns: 1fr;
   }
 }
+
+.wm-project-links { display:flex; flex-wrap:wrap; gap:12px; }

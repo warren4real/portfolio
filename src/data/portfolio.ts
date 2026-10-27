@@ -1,5 +1,11 @@
 export const resumeUrl = `${import.meta.env.BASE_URL}Warren_Malawae_Resume.pdf`
-export const projects = [
+type Project = {
+  id: string; name: string; subtitle: string; type: string; date: string;
+  status: string; platform: string; summary: string; contribution: string;
+  details: string[]; tags: string[]; code: string; color: string;
+  links?: { label: string; href: string }[];
+}
+export const projects: Project[] = [
   {
     id: 'arah', name: 'ARAH', subtitle: 'Campus navigation for AUP',
     type: 'Capstone · Team leader', date: 'Aug 2025 – Feb 2026',
@@ -44,6 +50,29 @@ export const projects = [
     contribution: 'Building the camera flow, strip composition and editing experience in SwiftUI and Xcode.',
     details: ['Built front and back camera preview, a countdown and automatic four-shot capture.', 'Added Original, B&W, Sepia and Noir filters, with saving to Photos and native sharing.', 'Developed Philippine holiday themes with automatic date detection and a manual theme picker.'],
     tags: ['SwiftUI', 'Xcode', 'Camera', 'Photo editing'], code: '05', color: '#b74436',
+  },
+  {
+    id: 'moresby-market', name: 'Moresby Market', subtitle: 'A local marketplace for Papua New Guinea',
+    type: 'Personal · Mobile & web development', date: '2026',
+    status: 'Working prototype', platform: 'React Native mobile app · Responsive website',
+    summary: 'A PNG-focused marketplace that helps individuals and businesses publish listings and connect with local buyers, starting with Port Moresby. Mobile and web share accounts, listings, saved items and conversations.',
+    contribution: 'Created and led the project through AI-assisted development: defined local selling requirements and buyer–seller workflows, guided interface decisions, configured services, tested on a physical iPhone and the web, and managed fixes and deployment.',
+    details: ['Implemented accounts, photo listings, kina pricing, property listings, search and location filters, with shared favourites across mobile and web.', 'Added buyer–seller text messaging, reporting, blocking and a restricted moderation dashboard backed by database access controls.', 'Prepared for small-group testing, with a deployed website and a standalone iPhone build. Payments, checkout, delivery and app-store distribution are not yet implemented.'],
+    tags: ['React Native', 'Expo', 'React', 'TypeScript', 'Supabase'], code: '06', color: '#476c70',
+    links: [
+      { label: 'View website', href: 'https://moresby-market.pages.dev/' },
+      { label: 'Mobile source', href: 'https://github.com/warren4real/moresby-market-mobile' },
+      { label: 'Website source', href: 'https://github.com/warren4real/moresby-market-web' },
+    ],
+  },
+  {
+    id: 'kina-wallet', name: 'Kina Wallet', subtitle: 'Planning digital payments for PNG',
+    type: 'Personal · System design', date: '2026',
+    status: 'Concept & system design', platform: 'Proposed mobile wallet ecosystem',
+    summary: 'A mobile-wallet concept exploring how people and merchants in Papua New Guinea could send, receive and use digital money through a connected local ecosystem.',
+    contribution: 'Defined the product direction and explored transaction flows, system architecture and potential partner roles through AI-assisted research and planning.',
+    details: ['Developed infrastructure blueprints covering customer, merchant and agent apps, a backend API and a proposed double-entry ledger.', 'Mapped planned cash-in, transfers, merchant payments and cash-out flows, alongside reconciliation, identity checks and fraud controls.', 'Concept and architecture work only: a working payment service, live financial integrations and partner agreements are not established.'],
+    tags: ['System design', 'Transaction flows', 'Ledger architecture', 'Product planning'], code: '07', color: '#8b7045',
   },
 ]
 export const skills = [
