@@ -39,7 +39,7 @@ export default function App() {
             </div>
 
             <Link to="/contact" className="rc-contact">
-              Let’s talk ↗
+              Let’s talk 
             </Link>
           </nav>
         </>
