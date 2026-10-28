@@ -81,4 +81,4 @@ export const skills = [
   { title: 'Microsoft platforms', items: ['Power Apps', 'Power Automate', 'Power BI', 'SharePoint', 'Word', 'Excel'] },
   { title: 'Systems', items: ['Windows Server configuration', 'Troubleshooting'] },
 ]
-export const certifications = ['IC3 Digital Literacy Certification — GS Level 2', 'Microsoft Word 2019 Associate', 'Critical Career Skills — Generative AI Foundations']
+export const certifications = ['IC3 Digital Literacy Certification — GS Level 2', 'Microsoft Word 2019 Associate',]
